@@ -2,13 +2,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/palas/IdeaProjects/PageFactoryModelFramework/src/test/java/testscripts/VerifyLoginTest.java">
+          name="C:/Users/Palash/IdeaProjects/PageFactoryModelFramework/src/test/java/testscripts/VerifyLoginPositiveTest.java">
         <classes>
-            <class name="testscripts.VerifyLoginTest">
+            <class name="testscripts.VerifyLoginPositiveTest">
                 <methods>
-                    <include name="verifyNoValue"/>
-                    <include name="verifyMinValue"/>
-                    <include name="verifyMaxValue"/>
+                    <include name="verifyLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Palash/IdeaProjects/PageFactoryModelFramework/src/test/java/testscripts/VerifyLoginNegativeTest.java">
+        <classes>
+            <class name="testscripts.VerifyLoginNegativeTest">
+                <methods>
+                    <include name="verifyLoginTest"/>
                 </methods>
             </class>
         </classes>

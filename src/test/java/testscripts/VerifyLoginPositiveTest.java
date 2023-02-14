@@ -3,6 +3,7 @@ package testscripts;//import java.util.*;
 import base.BaseClass;
 
 import constantpaths.ConstantPaths;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -10,7 +11,7 @@ import pagesobjects.LoginPage;
 import utils.ExcelFileReading;
 
 
-public class VerifyLoginTest extends BaseClass {
+public class VerifyLoginPositiveTest extends BaseClass {
 
     @BeforeMethod
     public void startBrowser() {
@@ -23,6 +24,7 @@ public class VerifyLoginTest extends BaseClass {
         loginPage.clickOnLoginWithEmail();
         loginPage.doLogin(email,password);
         loginPage.clickOnLoginBtn();
+        Assert.assertEquals(loginPage.getElementText(),email);
     }
 
     @DataProvider(name = "loginData")
